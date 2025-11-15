@@ -1,0 +1,494 @@
+00:10:28:651  INFO 98568 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+00:10:30:414 ERROR 98568 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on com.hmall.common.config.MyBatisConfig.mybatisPlusInterceptor
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:246) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:239) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:229) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:182) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:157) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	... 37 common frames omitted
+
+00:10:30:420  WARN 98568 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:669) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:661) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1302) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:864) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:852) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:839) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:779) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	... 25 common frames omitted
+
+00:10:30:421  WARN 98568 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:10:30:421  WARN 98568 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:10:30:423  WARN 98568 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:10:30:424  WARN 98568 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:15:40:448  INFO 62064 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+00:15:41:278 ERROR 62064 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on com.hmall.common.config.MyBatisConfig.mybatisPlusInterceptor
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1737) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:246) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:239) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:229) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:182) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:157) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	... 37 common frames omitted
+
+00:15:41:281  WARN 62064 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1737) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:669) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:661) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1302) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:864) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:852) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:839) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:779) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	... 25 common frames omitted
+
+00:15:41:283  WARN 62064 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:15:41:284  WARN 62064 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:15:41:284  WARN 62064 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:15:41:285  WARN 62064 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:22:36:938  INFO 80468 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+00:22:39:256  INFO 80468 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f3638690-f24a-3b0d-b048-b6505745e0d3
+00:22:39:349  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:350  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:350  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:401  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:406  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:408  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:408  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$564/0x0000000800690c40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:409  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:414  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:416  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:39:421  INFO 80468 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+00:22:39:489  INFO 80468 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+00:22:39:495  INFO 80468 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+00:22:39:584  INFO 80468 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+00:22:39:683  INFO 80468 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+00:22:39:905  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 0cf2cb47-ee24-449e-be9d-80b33801c2c6
+00:22:39:906  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] RpcClient init label, labels = {module=naming, source=sdk}
+00:22:39:907  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+00:22:39:907  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+00:22:39:909  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+00:22:39:909  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Try to connect to server on start up, server: {serverIp = '192.168.100.128', server main port = 8848}
+00:22:40:034  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Success to connect to server [192.168.100.128:8848] on start up, connectionId = 1763050959899_192.168.100.1_56813
+00:22:40:034  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+00:22:40:034  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$472/0x0000000800547840
+00:22:40:034  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Notify connected event to listeners.
+00:22:40:090  INFO 80468 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.100.128:8099
+00:22:40:665  INFO 80468 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Receive server push request, request = NotifySubscriberRequest, requestId = 225
+00:22:40:668  INFO 80468 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Ack server push request, request = NotifySubscriberRequest, requestId = 225
+00:22:42:304  INFO 80468 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.100.128:8099,msg:< RegisterTMRequest{applicationId='cart-service', transactionServiceGroup='hmall'} >
+00:22:44:411  INFO 80468 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x70792ed8, L:/192.168.100.1:61606 - R:/192.168.100.128:8099]
+00:22:44:417  INFO 80468 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 63 ms, version:1.5.2,role:TMROLE,channel:[id: 0x70792ed8, L:/192.168.100.1:61606 - R:/192.168.100.128:8099]
+00:22:44:417  INFO 80468 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[cart-service] txServiceGroup[hmall]
+00:22:44:428  INFO 80468 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+00:22:44:428  INFO 80468 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+00:22:44:437  INFO 80468 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+00:22:44:437  INFO 80468 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[cart-service] txServiceGroup[hmall]
+00:22:44:437  INFO 80468 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+00:22:44:439  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:44:715  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:44:719  INFO 80468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:22:45:042  INFO 80468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+00:22:45:055  INFO 80468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:22:45:055  INFO 80468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+00:22:45:283  INFO 80468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:22:45:283  INFO 80468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8322 ms
+00:22:45:584  INFO 80468 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+00:22:46:009  INFO 80468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+00:22:46:304  INFO 80468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+00:22:46:409  INFO 80468 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.100.128:8099
+00:22:46:409  INFO 80468 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.100.128:3306/hm-cart
+00:22:46:410  INFO 80468 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.100.128:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.100.128:3306/hm-cart', applicationId='cart-service', transactionServiceGroup='hmall'} >
+00:22:46:428  INFO 80468 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0xc89166ba, L:/192.168.100.1:58891 - R:/192.168.100.128:8099]
+00:22:46:428  INFO 80468 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 15 ms, version:1.5.2,role:RMROLE,channel:[id: 0xc89166ba, L:/192.168.100.1:58891 - R:/192.168.100.128:8099]
+00:22:52:619  INFO 80468 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+00:22:55:939  INFO 80468 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+00:22:59:743  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 48e5d1bf-fb5c-4369-b6c9-1cfa01317219
+00:22:59:743  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] RpcClient init label, labels = {module=naming, source=sdk}
+00:22:59:744  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+00:22:59:744  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+00:22:59:744  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+00:22:59:744  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Try to connect to server on start up, server: {serverIp = '192.168.100.128', server main port = 8848}
+00:22:59:870  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Success to connect to server [192.168.100.128:8848] on start up, connectionId = 1763050979734_192.168.100.1_55789
+00:22:59:870  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+00:22:59:870  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify connected event to listeners.
+00:22:59:870  INFO 80468 --- [main] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$472/0x0000000800547840
+00:22:59:904  INFO 80468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+00:22:59:915  INFO 80468 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.125.1:8082 register finished
+00:23:00:387  INFO 80468 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 226
+00:23:00:389  INFO 80468 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 226
+00:23:03:114  INFO 80468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+00:23:03:118  INFO 80468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+00:23:03:155  INFO 80468 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+00:23:03:255  INFO 80468 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 41.464 seconds (JVM running for 47.312)
+00:23:03:262  INFO 80468 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+00:23:03:264  INFO 80468 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+00:23:03:265  INFO 80468 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+00:33:57:112  INFO 80468 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:33:57:125  INFO 80468 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:33:57:248  INFO 80468 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 121 ms
+00:33:58:515 DEBUG 80468 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+00:33:58:588 DEBUG 80468 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+00:33:58:659 DEBUG 80468 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 3
+00:33:58:815 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=40305713537&ids=8533120&ids=1713453 HTTP/1.1
+00:33:58:815 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+00:33:58:815 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+00:33:59:425 DEBUG 80468 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+00:33:59:426 DEBUG 80468 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+00:33:59:433 DEBUG 80468 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 3
+00:33:59:437 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=40305713537&ids=8533120&ids=1713453 HTTP/1.1
+00:33:59:438 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+00:33:59:439 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+00:33:59:814  INFO 80468 --- [nacos-grpc-client-executor-140] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 236
+00:33:59:814  INFO 80468 --- [nacos-grpc-client-executor-140] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 236
+00:34:02:338 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (2898ms)
+00:34:02:338 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (3521ms)
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 13 Nov 2025 16:34:02 GMT
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 13 Nov 2025 16:34:02 GMT
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+00:34:02:339 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+00:34:02:343 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"1713453","name":"小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】","price":12800,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp","category":"拉拉裤","brand":"小鹿叮叮","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"40305713537","name":"【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41","price":35400,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp","category":"休闲鞋","brand":"奥古狮登","spec":"{\"颜色\": \"金色\", \"尺码\": \"41\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+00:34:02:343 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"1713453","name":"小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】","price":12800,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp","category":"拉拉裤","brand":"小鹿叮叮","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"40305713537","name":"【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41","price":35400,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp","category":"休闲鞋","brand":"奥古狮登","spec":"{\"颜色\": \"金色\", \"尺码\": \"41\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+00:34:02:345 DEBUG 80468 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1268-byte body)
+00:34:02:345 DEBUG 80468 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1268-byte body)
+00:34:04:576 DEBUG 80468 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+00:34:04:577 DEBUG 80468 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+00:34:04:583 DEBUG 80468 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 3
+00:34:04:585 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=40305713537&ids=8533120&ids=1713453 HTTP/1.1
+00:34:04:585 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+00:34:04:586 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+00:34:05:102 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (516ms)
+00:34:05:102 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+00:34:05:102 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+00:34:05:102 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 13 Nov 2025 16:34:05 GMT
+00:34:05:102 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+00:34:05:102 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+00:34:05:103 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+00:34:05:103 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"1713453","name":"小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】","price":12800,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp","category":"拉拉裤","brand":"小鹿叮叮","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"40305713537","name":"【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41","price":35400,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp","category":"休闲鞋","brand":"奥古狮登","spec":"{\"颜色\": \"金色\", \"尺码\": \"41\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+00:34:05:103 DEBUG 80468 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1268-byte body)
+00:34:15:767 DEBUG 80468 --- [http-nio-8082-exec-4] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?,?))
+00:34:15:920 DEBUG 80468 --- [http-nio-8082-exec-4] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 40305713537(Long), 8533120(Long)
+00:34:16:088 DEBUG 80468 --- [http-nio-8082-exec-4] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 2
+00:34:17:130  INFO 80468 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.100.128:8099:36743660713807873,branchId=36743660713807885,branchType=AT,resourceId=jdbc:mysql://192.168.100.128:3306/hm-cart,applicationData={"autoCommit":false}
+00:34:17:135  INFO 80468 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.100.128:8099:36743660713807873 36743660713807885 jdbc:mysql://192.168.100.128:3306/hm-cart {"autoCommit":false}
+00:34:17:138  INFO 80468 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+00:34:19:278 DEBUG 80468 --- [http-nio-8082-exec-5] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?,?))
+00:34:19:279 DEBUG 80468 --- [http-nio-8082-exec-5] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 40305713537(Long), 8533120(Long)
+00:34:19:283 DEBUG 80468 --- [http-nio-8082-exec-5] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 0
+00:39:48:265 DEBUG 80468 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+00:39:48:276 DEBUG 80468 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+00:39:48:292 DEBUG 80468 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+00:39:48:327 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=1713453 HTTP/1.1
+00:39:48:327 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+00:39:48:327 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+00:39:49:914 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (1584ms)
+00:39:49:916 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+00:39:49:916 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+00:39:49:916 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 13 Nov 2025 16:39:49 GMT
+00:39:49:917 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+00:39:49:917 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+00:39:49:917 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+00:39:49:925 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"1713453","name":"小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】","price":12800,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp","category":"拉拉裤","brand":"小鹿叮叮","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+00:39:49:926 DEBUG 80468 --- [http-nio-8082-exec-8] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (394-byte body)
+00:39:52:653 DEBUG 80468 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+00:39:52:694 DEBUG 80468 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+00:39:52:736 DEBUG 80468 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+00:39:52:737 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=1713453 HTTP/1.1
+00:39:52:739 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+00:39:52:739 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+00:39:53:271 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (533ms)
+00:39:53:273 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+00:39:53:273 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+00:39:53:273 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 13 Nov 2025 16:39:53 GMT
+00:39:53:273 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+00:39:53:273 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+00:39:53:273 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+00:39:53:274 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"1713453","name":"小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】","price":12800,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp","category":"拉拉裤","brand":"小鹿叮叮","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+00:39:53:274 DEBUG 80468 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (394-byte body)
+00:40:01:371 DEBUG 80468 --- [http-nio-8082-exec-10] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+00:40:01:395 DEBUG 80468 --- [http-nio-8082-exec-10] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 1713453(Long)
+00:40:01:406 DEBUG 80468 --- [http-nio-8082-exec-10] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 1
+00:40:02:088  INFO 80468 --- [rpcDispatch_RMROLE_1_2_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.100.128:8099:36743660713807898,branchId=36743660713807907,branchType=AT,resourceId=jdbc:mysql://192.168.100.128:3306/hm-cart,applicationData={"autoCommit":false}
+00:40:02:088  INFO 80468 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.100.128:8099:36743660713807898 36743660713807907 jdbc:mysql://192.168.100.128:3306/hm-cart {"autoCommit":false}
+00:40:02:089  INFO 80468 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+08:09:51:454  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Server healthy check fail, currentConnection = 1763050956533_192.168.100.1_62038
+08:09:51:615  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+08:09:52:177 ERROR 80468 --- [com.alibaba.nacos.client.naming.updater.7] com.alibaba.nacos.common.remote.client   : Send request fail, request = ServiceQueryRequest{headers={}, requestId='null'}, retryTimes = 0, errorMessage = java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 15900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@38a8777a[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@234cff57, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5e8507f1, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@4bcaa195}}}}}]]
+08:09:53:225  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel [id: 0x70792ed8, L:/192.168.100.1:61606 - R:/192.168.100.128:8099] read idle.
+08:09:53:237  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x70792ed8, L:/192.168.100.1:61606 - R:/192.168.100.128:8099]
+08:09:53:255  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x70792ed8, L:/192.168.100.1:61606 - R:/192.168.100.128:8099]) will closed
+08:09:53:415  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]) will closed
+08:09:53:423  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]
+08:09:53:424  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]
+08:09:53:424  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]
+08:09:53:424  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]) will closed
+08:09:53:424  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]) will closed
+08:09:53:434  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]
+08:09:53:440  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]
+08:09:53:440  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]
+08:09:53:440  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]) will closed
+08:09:53:440  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x70792ed8, L:/192.168.100.1:61606 ! R:/192.168.100.128:8099]) will closed
+08:09:53:895  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Server healthy check fail, currentConnection = 1763050979734_192.168.100.1_55789
+08:09:53:896  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+08:09:54:189  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Server check success, currentServer is 192.168.100.128:8848 
+08:09:54:489  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Success to connect a server [192.168.100.128:8848], connectionId = 1763078994327_192.168.100.1_54717
+08:09:54:489  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Success to connect a server [192.168.100.128:8848], connectionId = 1763078994326_192.168.100.1_54711
+08:09:54:491  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763050956533_192.168.100.1_62038
+08:09:54:491  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763050979734_192.168.100.1_55789
+08:09:54:492  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763050956533_192.168.100.1_62038
+08:09:54:492  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763050979734_192.168.100.1_55789
+08:09:54:501  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Notify disconnected event to listeners
+08:09:54:502  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify disconnected event to listeners
+08:09:54:511  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Notify connected event to listeners.
+08:09:54:535  WARN 80468 --- [nacos-grpc-client-executor-6051] c.a.n.c.remote.client.grpc.GrpcClient    : [1763050979734_192.168.100.1_55789]Ignore error event,isRunning:true,isAbandon=true
+08:09:54:535  WARN 80468 --- [nacos-grpc-client-executor-5671] c.a.n.c.remote.client.grpc.GrpcClient    : [1763050956533_192.168.100.1_62038]Ignore error event,isRunning:true,isAbandon=true
+08:09:54:568  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify connected event to listeners.
+08:09:58:192  INFO 80468 --- [nacos-grpc-client-executor-6056] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 250
+08:09:58:192  INFO 80468 --- [nacos-grpc-client-executor-6056] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 250
+08:09:58:198  INFO 80468 --- [nacos-grpc-client-executor-6057] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 253
+08:09:58:198  INFO 80468 --- [nacos-grpc-client-executor-6057] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 253
+08:09:59:667  INFO 80468 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.100.128:8099
+08:09:59:767  INFO 80468 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.100.128:8099,msg:< RegisterTMRequest{applicationId='cart-service', transactionServiceGroup='hmall'} >
+08:10:00:271  INFO 80468 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x67615e78, L:/192.168.100.1:61226 - R:/192.168.100.128:8099]
+08:10:00:276  INFO 80468 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 253 ms, version:1.5.2,role:TMROLE,channel:[id: 0x67615e78, L:/192.168.100.1:61226 - R:/192.168.100.128:8099]
+11:17:11:062  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Server healthy check fail, currentConnection = 1763078994327_192.168.100.1_54717
+11:17:10:739  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel [id: 0x67615e78, L:/192.168.100.1:61226 - R:/192.168.100.128:8099] read idle.
+11:17:10:981  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Server healthy check fail, currentConnection = 1763050959899_192.168.100.1_56813
+11:17:11:238  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+11:17:11:238  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+11:17:11:240  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x67615e78, L:/192.168.100.1:61226 - R:/192.168.100.128:8099]
+11:17:11:275  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x67615e78, L:/192.168.100.1:61226 - R:/192.168.100.128:8099]) will closed
+11:17:11:464  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Server healthy check fail, currentConnection = 1763078994326_192.168.100.1_54711
+11:17:11:470  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+11:17:11:497  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]) will closed
+11:17:11:539  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]
+11:17:11:584  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]
+11:17:11:589  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]
+11:17:11:592  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]) will closed
+11:17:11:594  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]) will closed
+11:17:11:608  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]
+11:17:11:612  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]
+11:17:11:620  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]
+11:17:11:620  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]) will closed
+11:17:11:623  INFO 80468 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x67615e78, L:/192.168.100.1:61226 ! R:/192.168.100.128:8099]) will closed
+11:17:12:112  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Success to connect a server [192.168.100.128:8848], connectionId = 1763090231895_192.168.100.1_62379
+11:17:12:115  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763078994327_192.168.100.1_54717
+11:17:12:115  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763078994327_192.168.100.1_54717
+11:17:12:115  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Success to connect a server [192.168.100.128:8848], connectionId = 1763090231896_192.168.100.1_62377
+11:17:12:113  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Success to connect a server [192.168.100.128:8848], connectionId = 1763090231895_192.168.100.1_62378
+11:17:12:116  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763050959899_192.168.100.1_56813
+11:17:12:116  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763050959899_192.168.100.1_56813
+11:17:12:124  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Notify disconnected event to listeners
+11:17:12:116  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763078994326_192.168.100.1_54711
+11:17:12:128  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763078994326_192.168.100.1_54711
+11:17:12:127  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify disconnected event to listeners
+11:17:12:133  WARN 80468 --- [nacos-grpc-client-executor-8485] c.a.n.c.remote.client.grpc.GrpcClient    : [1763078994327_192.168.100.1_54717]Ignore error event,isRunning:true,isAbandon=true
+11:17:12:133  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Notify disconnected event to listeners
+11:17:12:133  WARN 80468 --- [nacos-grpc-client-executor-7954] c.a.n.c.remote.client.grpc.GrpcClient    : [1763050959899_192.168.100.1_56813]Ignore error event,isRunning:true,isAbandon=true
+11:17:12:148  WARN 80468 --- [nacos-grpc-client-executor-7929] c.a.n.c.remote.client.grpc.GrpcClient    : [1763078994326_192.168.100.1_54711]Ignore error event,isRunning:true,isAbandon=true
+11:17:12:157  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify connected event to listeners.
+11:17:12:157  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Notify connected event to listeners.
+11:17:12:168  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Notify connected event to listeners.
+11:17:13:021  INFO 80468 --- [nacos-grpc-client-executor-7956] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Receive server push request, request = NotifySubscriberRequest, requestId = 255
+11:17:13:028  INFO 80468 --- [nacos-grpc-client-executor-7956] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Ack server push request, request = NotifySubscriberRequest, requestId = 255
+11:17:15:081  INFO 80468 --- [nacos-grpc-client-executor-8489] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 263
+11:17:15:091  INFO 80468 --- [nacos-grpc-client-executor-8489] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 263
+11:17:16:777  INFO 80468 --- [nacos-grpc-client-executor-8490] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 264
+11:17:16:784  INFO 80468 --- [nacos-grpc-client-executor-8490] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 264
+11:17:19:643  INFO 80468 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.100.128:8099
+11:17:19:665  INFO 80468 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.100.128:8099,msg:< RegisterTMRequest{applicationId='cart-service', transactionServiceGroup='hmall'} >
+11:17:19:810  INFO 80468 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x15fb7259, L:/192.168.100.1:49223 - R:/192.168.100.128:8099]
+11:17:19:813  INFO 80468 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 85 ms, version:1.5.2,role:TMROLE,channel:[id: 0x15fb7259, L:/192.168.100.1:49223 - R:/192.168.100.128:8099]
+15:17:14:448  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Server healthy check fail, currentConnection = 1763090231895_192.168.100.1_62379
+15:17:14:463  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+15:17:17:380  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Success to connect a server [192.168.100.128:8848], connectionId = 1763104636219_192.168.100.1_61297
+15:17:17:382  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763090231895_192.168.100.1_62379
+15:17:17:383  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763090231895_192.168.100.1_62379
+15:17:17:401  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify disconnected event to listeners
+15:17:17:413  WARN 80468 --- [nacos-grpc-client-executor-11652] c.a.n.c.remote.client.grpc.GrpcClient    : [1763090231895_192.168.100.1_62379]Ignore error event,isRunning:true,isAbandon=true
+15:17:17:436  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify connected event to listeners.
+15:17:20:599  INFO 80468 --- [nacos-grpc-client-executor-11659] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 277
+15:17:20:602  INFO 80468 --- [nacos-grpc-client-executor-11659] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 277
+15:17:21:440  INFO 80468 --- [nacos-grpc-client-executor-11660] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 278
+15:17:21:440  INFO 80468 --- [nacos-grpc-client-executor-11660] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 278
+23:25:02:169  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Server healthy check fail, currentConnection = 1763090231895_192.168.100.1_62378
+23:25:02:202  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+23:25:03:537  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Server healthy check fail, currentConnection = 1763104636219_192.168.100.1_61297
+23:25:03:537  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+23:25:03:549  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Server healthy check fail, currentConnection = 1763090231896_192.168.100.1_62377
+23:25:03:549  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+23:25:03:819  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Success to connect a server [192.168.100.128:8848], connectionId = 1763133903690_192.168.100.1_63356
+23:25:03:819  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Success to connect a server [192.168.100.128:8848], connectionId = 1763133903698_192.168.100.1_63368
+23:25:03:819  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763090231896_192.168.100.1_62377
+23:25:03:819  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Success to connect a server [192.168.100.128:8848], connectionId = 1763133903694_192.168.100.1_63367
+23:25:03:820  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763104636219_192.168.100.1_61297
+23:25:03:819  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Abandon prev connection, server is 192.168.100.128:8848, connectionId is 1763090231895_192.168.100.1_62378
+23:25:03:821  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763090231895_192.168.100.1_62378
+23:25:03:821  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763104636219_192.168.100.1_61297
+23:25:03:821  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1763090231896_192.168.100.1_62377
+23:25:03:827  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Notify disconnected event to listeners
+23:25:03:828  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Notify disconnected event to listeners
+23:25:03:829  WARN 80468 --- [nacos-grpc-client-executor-16633] c.a.n.c.remote.client.grpc.GrpcClient    : [1763090231896_192.168.100.1_62377]Ignore error event,isRunning:true,isAbandon=true
+23:25:03:829  WARN 80468 --- [nacos-grpc-client-executor-18076] c.a.n.c.remote.client.grpc.GrpcClient    : [1763104636219_192.168.100.1_61297]Ignore error event,isRunning:true,isAbandon=true
+23:25:03:829  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify disconnected event to listeners
+23:25:03:829  WARN 80468 --- [nacos-grpc-client-executor-16708] c.a.n.c.remote.client.grpc.GrpcClient    : [1763090231895_192.168.100.1_62378]Ignore error event,isRunning:true,isAbandon=true
+23:25:03:833  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c76f6e6d-71e1-46ef-bbca-11464de9e965_config-0] Notify connected event to listeners.
+23:25:03:833  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Notify connected event to listeners.
+23:25:03:833  INFO 80468 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Notify connected event to listeners.
+23:25:05:531  INFO 80468 --- [nacos-grpc-client-executor-18080] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 283
+23:25:05:532  INFO 80468 --- [nacos-grpc-client-executor-18080] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 283
+23:25:05:537  INFO 80468 --- [nacos-grpc-client-executor-18081] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 284
+23:25:05:537  INFO 80468 --- [nacos-grpc-client-executor-18081] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 284
+23:25:06:527  INFO 80468 --- [nacos-grpc-client-executor-18082] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Receive server push request, request = NotifySubscriberRequest, requestId = 291
+23:25:06:527  INFO 80468 --- [nacos-grpc-client-executor-18082] com.alibaba.nacos.common.remote.client   : [48e5d1bf-fb5c-4369-b6c9-1cfa01317219] Ack server push request, request = NotifySubscriberRequest, requestId = 291
+23:25:07:029  INFO 80468 --- [nacos-grpc-client-executor-16710] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Receive server push request, request = NotifySubscriberRequest, requestId = 292
+23:25:07:029  INFO 80468 --- [nacos-grpc-client-executor-16710] com.alibaba.nacos.common.remote.client   : [0cf2cb47-ee24-449e-be9d-80b33801c2c6] Ack server push request, request = NotifySubscriberRequest, requestId = 292
+23:50:50:536  INFO 80468 --- [rpcDispatch_RMROLE_1_3_32] i.s.c.r.p.client.RmUndoLogProcessor      : rm handle undo log process:UndoLogDeleteRequest{resourceId='jdbc:mysql://192.168.100.128:3306/hm-cart', saveDays=7, branchType=AT}
