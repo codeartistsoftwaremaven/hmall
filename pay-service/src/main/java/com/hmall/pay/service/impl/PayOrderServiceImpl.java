@@ -68,11 +68,11 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
             throw new BizIllegalException("交易已支付或关闭！");
         }
         //TODO 5.修改订单状态
-        try {
+        /*try {
             rabbitTemplate.convertAndSend("pay.direct","pay.success",po.getBizOrderNo());
         } catch (Exception e) {
             log.error("支付状态消息发送失败！订单id：{}", po.getBizOrderNo(),e);
-        }
+        }*/
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {
